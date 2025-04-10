@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import sample from './sample.jpg'; // Import the image
+import sample from '../../Asset/sample.jpg'; 
 import 'font-awesome/css/font-awesome.min.css'; // Import Font Awesome globally
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCirclePlus } from '@fortawesome/free-solid-svg-icons'; // Import the circle-plus icon
@@ -11,17 +11,14 @@ const EmployeeForm = () => {
     <div>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-0" style={{ backgroundColor: "#EBEBEB" }}>
         {/* Left Column: Image, Tools, Skills */}
-        <div className="flex flex-col  space-y-6">
+        <div className="flex flex-col space-y-6">
           {/* Image */}
-          <div >
-          <img
-  src={sample}
-  alt="Employee"
-  className="w-80 ml-5 h-80 rounded-lg shadow-md bg-white border-8 border-white"
-/>
-
-
-          
+          <div>
+            <img
+              src={sample}
+              alt="Employee"
+              className="w-80 ml-5 h-80 rounded-lg shadow-md bg-white border-8 border-white"
+            />
           </div>
 
           {/* Tools Section */}
@@ -30,7 +27,7 @@ const EmployeeForm = () => {
             {['Figma', 'Sketch', 'Adobe Illustrator', 'Adobe Photoshop', 'Adobe XD'].map(tool => (
               <button
                 key={tool}
-                className="flex items-center justify-start mb-2 py-2 px-6 !bg-white !text-[#1c3654] !border-2 !border-[#1c3654] rounded-md shadow-md w-full max-w-[350px]"
+                className="flex items-center justify-start mb-2 py-2 px-6 !bg-white !text-[#1c3654] border-none rounded-md shadow-md w-full max-w-[350px]"
               >
                 <span className="mr-2">{tool}</span> {/* Tool name */}
                 <FontAwesomeIcon icon={faCirclePlus} style={{ color: '#1c3654' }} className="ml-auto" /> {/* Icon on right */}
@@ -44,7 +41,7 @@ const EmployeeForm = () => {
             {['Web Design', 'Logo Design', 'Mobile App Design', 'Landing Page Design', 'Product Design'].map(skill => (
               <button
                 key={skill}
-                className="flex items-center justify-start mb-2 py-2 px-6 !bg-white !text-[#1c3654] !border-2 !border-[#1c3654] rounded-md shadow-md w-full max-w-[350px]"
+                className="flex items-center justify-start mb-2 py-2 px-6 !bg-white !text-[#1c3654] border-none rounded-md shadow-md w-full max-w-[350px]"
               >
                 <span className="mr-2">{skill}</span> {/* Skill name */}
                 <FontAwesomeIcon icon={faCirclePlus} style={{ color: '#1c3654' }} className="ml-auto" /> {/* Icon on right */}

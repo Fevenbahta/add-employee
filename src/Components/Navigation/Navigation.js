@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaBell, FaEnvelope, FaCog, FaUserCircle, FaSearch, FaEllipsisV } from 'react-icons/fa'; // Added FaEllipsisV for the three dots
-import sample from './sample.jpg'; // Import the profile image
+import sample from '../../Asset/sample.jpg'; 
 const Navigation = () => {
   return (
    

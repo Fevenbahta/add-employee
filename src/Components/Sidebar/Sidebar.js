@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { FaConciergeBell, FaPaintBrush, FaHome, FaEnvelope, FaCalendarAlt, FaCog, FaQuestionCircle } from 'react-icons/fa'; // Import icons
-import logo from './logo.jpg'; // Import logo
-
+import logo from '../../Asset/logo.jpg'; 
 const Sidebar = () => {
   const [selectedSection, setSelectedSection] = useState("design"); // Track the selected section
 
   return (
-    <div className="w-96 h-screen bg-[#e9ebea] p-6 fixed">
+    <div className="w-60 h-screen bg-[#e9ebea] p-6 fixed">
       {/* Logo */}
       <div className="mb-10">
         <img src={logo} alt="Company Logo" className="w-32 h-32 object-contain mx-auto" />
@@ -19,23 +18,60 @@ const Sidebar = () => {
       <div className="mb-4">
         {/* Reception Button */}
         <button
-        className={`w-full py-2 mb-2 rounded-full flex items-center justify-center 
-          ${selectedSection === "reception" ? "bg-[#1c3654] text-white" : "bg-[#e9ebea] text-[#1c3654]"}`}
-        onClick={() => setSelectedSection("reception")}
-      >
-        <FaConciergeBell className={`inline mr-2 ${selectedSection === "reception" ? "text-yellow-500" : "text-[#1c3654]"}`} />
-        <span className={`${selectedSection === "reception" ? "text-yellow-500" : "text-[#1c3654]"}`}>Reception</span>
-      </button>
-      
-      {/* Design Button */}
-      <button
-        className={`w-full py-2 mb-2 rounded-full flex items-center justify-center 
-          ${selectedSection === "design" ? "bg-[#1c3654] text-white" : "bg-[#e9ebea] text-[#1c3654]"}`}
-        onClick={() => setSelectedSection("design")}
-      >
-        <FaPaintBrush className={`inline mr-2 ${selectedSection === "design" ? "text-yellow-500" : "text-[#1c3654]"}`} />
-        <span className={`${selectedSection === "design" ? "text-yellow-500" : "text-[#1c3654]"}`}>Design</span>
-      </button>
+  onClick={() => setSelectedSection("reception")}
+  className="py-2 mb-2 rounded-full flex items-center justify-center"
+  style={{
+    width: '200px',
+    backgroundColor:
+      selectedSection === "reception" ? "#1c3654" : "#e9ebea",
+    color: selectedSection === "reception" ? "#ffffff" : "#1c3654",
+  }}
+>
+  <FaConciergeBell
+    className="inline mr-2"
+    style={{
+      color:
+        selectedSection === "reception" ? "#FFD700" : "#1c3654",
+    }}
+  />
+  <span
+    style={{
+      color:
+        selectedSection === "reception" ? "#FFD700" : "#1c3654",
+    }}
+  >
+    Reception
+  </span>
+</button>
+
+<button
+  onClick={() => setSelectedSection("design")}
+  className="py-2 mb-2 rounded-full flex items-center justify-center"
+  style={{
+    width: '200px',
+    backgroundColor:
+      selectedSection === "design" ? "#1c3654" : "#e9ebea",
+    color: selectedSection === "design" ? "#ffffff" : "#1c3654",
+  }}
+>
+  <FaPaintBrush
+    className="inline mr-2"
+    style={{
+      color:
+        selectedSection === "design" ? "#FFD700" : "#1c3654",
+    }}
+  />
+  <span
+    style={{
+      color:
+        selectedSection === "design" ? "#FFD700" : "#1c3654",
+    }}
+  >
+    Design
+  </span>
+</button>
+
+
       </div>
 
       {/* Horizontal Line below buttons */}
