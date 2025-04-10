@@ -3,7 +3,7 @@ import React from "react";
 import Sidebar from "../common/Sidebar";
 import Header from "../common/Header";
 import MainContent from "./MainContent";
-
+import Employees from "../../containers/HR/Employees"; 
 const dummyUsers = new Array(6).fill({
   name: "Marcus Tipton",
   role: "Senior Developer",
@@ -24,7 +24,8 @@ export default function DashboardLayout() {
       <Sidebar />
       <main className="flex-1 relative p-6 overflow-hidden">
         <Header />
-        <MainContent users={dummyUsers} roomTitles={roomTitles} />
+        {/* <MainContent users={dummyUsers} roomTitles={roomTitles} /> */}
+        <Employees />
       </main>
     </div>
   );
