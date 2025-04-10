@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+.flex{
+  background-color: #e9ebea;
+}
+
+/* You can change the width to any desired size */
+.sidebar {
+  width: 250px; /* Example width */
+  background-color: #1c3654;
+  height: 100vh;
+  padding: 16px;
+  color: white;
+}
