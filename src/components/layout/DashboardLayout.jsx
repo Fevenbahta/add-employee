@@ -3,7 +3,7 @@ import React from "react";
 import Sidebar from "../common/Sidebar";
 import Header from "../common/Header";
 import MainContent from "./MainContent";
-import Employees from "../../containers/HR/Employees"; 
+
 const dummyUsers = new Array(6).fill({
   name: "Marcus Tipton",
   role: "Senior Developer",
@@ -20,12 +20,20 @@ const roomTitles = [
 
 export default function DashboardLayout() {
   return (
-    <div className="flex min-h-screen  font-sans bg-[#E9EBEA] text-[#1e1f27]">
-      <Sidebar />
+    <div className="flex min-h-screen font-sans bg-[#E9EBEA] text-[#1e1f27]">
+      <aside
+        className="h-screen overflow-y-auto "
+        style={{
+          scrollbarWidth: "none",
+          msOverflowStyle: "none",
+        }}
+      >
+        <Sidebar />
+      </aside>
+
       <main className="flex-1 relative p-6 overflow-hidden">
         <Header />
-        {/* <MainContent users={dummyUsers} roomTitles={roomTitles} /> */}
-        <Employees />
+        <MainContent users={dummyUsers} roomTitles={roomTitles} />
       </main>
     </div>
   );
