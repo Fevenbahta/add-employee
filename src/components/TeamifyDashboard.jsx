@@ -1,7 +1,7 @@
 // File: pages/TeamifyDashboard.jsx
 import React, { useState } from "react";
 import ProfileCard from "./profile/ProfileCard";
-import MeetingRoomCard from "./MeetingRoomCard/MeetingRoomCard";
+import Card from "./MeetingRoomCard/MeetingRoomCard";
 import Sidebar from "./common/Sidebar";
 import Header from "./common/Header";
 import KnockCallModal from "./modal/KnockCallModal";

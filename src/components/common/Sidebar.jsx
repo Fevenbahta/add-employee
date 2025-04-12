@@ -35,6 +35,11 @@ export default function Sidebar() {
       icon: <Palette className="w-4 h-4" />,
       path: "/design",
     },
+    {
+      label: "Lobby",
+      icon: <Palette className="w-4 h-4" />,
+      path: "/lobby",
+    },
     { label: "Digital Marketing", icon: <Megaphone className="w-4 h-4" /> },
     { label: "Web Development", icon: <Code className="w-4 h-4" /> },
     {
